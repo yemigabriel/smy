@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="nivo-slider/themes/default/default.css" type="text/css" />
+    <link rel="stylesheet" href="nivo-slider/nivo-slider.css" type="text/css" />
+</head>
+<body>
+
+
+	<div id="wrapper"> 
+		<!-- slider html code begins -->
+        <div class="slider-wrapper theme-default">
+            <div id="slider" style="height:400px"><!-- fixed height will ensure all images fit properly. You can also style it from an external css file -->
+                <img src="images/slider1.jpg" alt=" Slider 1" data-transition="pop" title="Caption For Slider 1"/>
+        		<img src="images/slider2.jpg"  alt="Slider 2" data-transition="pop" title="Caption For Slider 2" />
+            </div>
+        </div>
+        <!-- slider html code ends -->
+      </div>
+
+  	<!-- nivo javascript begins -->
+    <script type="text/javascript" src="nivo-slider/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+    <!-- nivo javascript ends -->
+
+
+	
+</body>
+</html>
