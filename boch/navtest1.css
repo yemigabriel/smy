@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+.primary_menu {
+	float: right;
+	clear: right;
+}
+.primary_menu ul li{
+	float: left;
+	margin: 5px 5px;
+	padding-left: 20px ;
+	border-left: 1px solid #ccc;
+	display: inline;
+}
+
+.primary_menu ul li:first-child{ /*make left border zero for first li element*/
+	border-left: 0px solid #ccc;
+}
+
+.primary_menu ul li a{
+	font-size: 14px;
+	color: #fff;
+}
+
+.dropdown {
+	position:relative;
+	
+}
+.dropnav{
+	position:absolute;
+	display:none;
+}
+
+.dropnav li{
+	 border-bottom: 1px solid rgba(255,255,255,.2);
+	}
+
+.dropdown:hover > dropnav{
+	display:block;
+}
+	
+	

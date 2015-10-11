@@ -1,0 +1,620 @@
+/*. new changes begins */
+.nivo-caption{
+	background: rgba(3, 62, 104, 0.8)!important; /*used important to override the original background styling in nivo-slider.css. You can change it from there as well if u prefer*/
+}
+	
+/*new changes stop */
+
+body{
+	margin: 0px; /* stops some browsers from adding unwanted margins*/
+	font-family: "Helvetica", Arial;
+	font-weight: 100; /*makes it thinner than usual.*/
+	font-size: 13px;
+	color: #555;
+}
+
+h1,h2,h3,h4{
+	text-transform: lowercase; /*keeps it in lower case no matter what. Other options include uppercase and capitalize*/
+	font-weight: 100;
+}
+
+h1{
+	font-size: 2.5em;
+}
+
+h2{
+	font-size: 2.2em;
+	line-height:10px;
+}
+
+#headline{
+	font-size: 2em;
+	line-height:10px;
+	font-weight:lighter;
+	font-family:"Helvetica", Arial;
+	color:#003;
+	font-style:oblique;
+}
+
+a{
+	text-decoration: none; /*cancels the default underlining of a elements*/
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+#container{
+	width: 100%;
+}
+
+header{
+	position: absolute; /*as opposed to fixed because we only want it fixed WRT the container not the entire window*/
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background:rgba(3, 62, 104, 0.8); /*loads better than using images like they did; 0.8 -> transparency/alpha*/
+	height: 80px;
+	z-index: 1;
+}
+
+.header_content{
+	margin: 0px auto; /*this centers it in the page: 0px - top and bottom margins; auto - left and right*/
+	width: 80%; /*percentages keep widths fluid and more responsive */
+	max-width: 1000px; /*but we can set limits like this*/
+}
+
+#header_menu{
+	float: right;
+}
+
+#header_menu form{
+	float: left;
+}
+.primary_menu {
+	float: right;
+	clear: right;
+}
+.primary_menu ul li{
+	float: left;
+	margin: 5px 5px;
+	padding-left: 20px ;
+	border-left: 1px solid #ccc;
+	display: inline;
+}
+
+.primary_menu ul li:first-child{ /*make left border zero for first li element*/
+	border-left: 0px solid #ccc;
+}
+
+.primary_menu ul li a{
+	font-size: 14px;
+	color: #fff;
+}
+
+.dropdown {
+	position:relative;
+	
+}
+.dropnav{
+	position:absolute;
+	display:none;
+}
+
+#logo{
+	width: 210px;
+    position: absolute;
+    top: 0px;
+    margin-left: 10px;
+    background: #fff;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-bottom-left-radius:-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -moz-border-bottom-left-radius: 10px;
+    -moz-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+}
+
+#logo h1{
+	font-size: 5em;
+	border-bottom: 2px dotted #ccc;
+	margin-bottom: 2px;
+	color: #033E68;
+}
+
+#main{
+	margin: 0px auto; /*this centers it in the page: 0px - top and bottom margins; auto - left and right*/
+	width: 80%; /*percentages keep widths fluid and more responsive */
+	max-width: 1000px; /*but we can set limits like this*/
+}
+
+
+.content{
+	margin: 0px 0px 80px;
+	float: left;
+	width: 100%;
+
+}
+
+aside{
+	float: left; /*positions this left */
+	width: 20%; /*a quarter of #content's width*/
+	min-height: 200px;
+	border: 0px solid #aaa; /*just for clarity... you can remove this*/
+	border-radius: 3px;
+	-moz-border-radius: 3px; /*for older versions of mozilla browers*/
+	-webkit-border-radius: 3px; /*for older versions of webkit based browsers like Safari etc*/
+	padding: 5px;
+}
+
+
+.read_more{
+	background:#E6E6E6;
+	padding: 5px;
+	display: block;
+	text-transform: lowercase;
+	text-decoration: none;
+	color: #333;
+	font-weight:bold;
+	font-size:12px;
+}
+
+.read_more img{
+	float: right;
+    border-left: 1px solid #fff;
+    padding-left: 5px;
+}
+
+
+
+.nav_box{
+	width: 77%; /* not 80% to make up for paddings, margins*/
+	float: right;
+	padding-top:20px ;
+	border: 0px solid #aaa; /*just for clarity... you can remove this*/
+	border-radius: 3px;
+	-moz-border-radius: 3px; /*for older versions of mozilla browers*/
+	-webkit-border-radius: 3px; /*for older versions of webkit based browsers like Safari etc*/
+	
+}
+
+#hero-nav{
+    width: 868px;
+    height: 41px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background:#033E68;
+	opacity: 0.8;
+}
+
+.main_content{
+	width: 55%;
+	float: right;
+	font-size: 14px;
+	padding-top:20px ;
+	padding-left: 10px;
+
+	
+}
+
+.main_content1{
+	width: 20%;
+	float: left;
+	font-size: 14px;
+	padding-top:20px ;
+	padding-left: 10px;
+}
+
+
+.nav_box ul{
+	list-style: none; /*removes any bullet*/
+	padding: 0px; /* stops some browsers from adding unwanted paddings*/
+	margin: 0px; /* stops some browsers from adding unwanted margins*/
+}
+
+.nav_box ul li{
+	width: 30%; /* not 33% to account for margins and paddings*/
+	float: left;
+	margin-left: 10px;
+	position: relative; /*this helps anchor the a element below (line 105) */
+	overflow: hidden; /*hides any overflow of elements e.g images...*/
+	border-radius: 10px; /*personally I don't like this - its too large. But the dbh site favours non-subtle design patterns*/
+	-moz-border-radius: 10px; /*for older versions of mozilla browers*/
+	-webkit-border-radius: 10px; /*for older versions of webkit based browsers like Safari etc*/
+	
+}
+
+.nav_box ul li img{
+	width: auto;
+}
+
+.nav_box ul li a{
+	position: absolute;
+	bottom: 0px; /*absolute ... to the bottom of the li element (line 91)*/
+	left: 0px;
+	width: 100%;
+	font-size: 1.5em; /*em not px to enable scaling...*/
+	text-transform: lowercase;
+	background:#033E68;
+	opacity: 0.8;
+	color: #fff;
+	text-decoration: none; /*cancels the default underlining of a elements*/
+	padding: 5px;
+
+}
+
+.nav_box ul li a img{
+    float: right;
+    border-left: 1px solid #fff;
+}
+
+footer{
+	margin-top: 50px;
+	width: 100%;
+	min-height: 50px;
+	clear: both; /*clears floating in #main on both left and right sides. You can try removing it to see what happens*/
+}
+
+.nav_wrapper{
+	background: #666; /*NOT the mark o!*/
+	height: 30px;
+}
+
+.footer_content{
+	margin: 0px auto; /*this centers it in the page: 0px - top and bottom margins; auto - left and right*/
+	width: 80%; /*percentages keep widths fluid and more responsive */
+	max-width: 1000px; /*but we can set limits like this*/
+}
+
+.nav_menu{
+
+}
+
+.nav_menu ul{
+	list-style: none; /*removes any bullet*/
+	padding: 0px; /* stops some browsers from adding unwanted paddings*/
+	margin: 0px; /* stops some browsers from adding unwanted margins*/
+	float: left;
+}
+
+.nav_menu ul li{
+	float: left;
+	margin: 5px 5px;
+	padding-left: 5px ;
+	border-left: 1px solid #ccc;
+}
+
+.nav_menu ul li:first-child{ /*make left border zero for first li element*/
+	border-left: 0px solid #ccc;
+}
+
+.nav_menu ul li a{
+	font-size: 12px;
+	color: #ccc;
+}
+
+.aside_nav_menu{
+	clear: left;
+    float: left;
+    margin: 0;
+	padding:0;
+}
+
+.aside_nav_menu ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.aside_nav_menu ul li{
+	padding: 2px;
+}
+
+.aside_nav_menu ul li a{
+	font-size: 1em;
+	color:#555;
+	font-weight: 100;
+}
+
+.aside_nav_menu ul li a:hover{
+	color:#003;
+}
+
+.main_font{
+	font-family:"Helvetica", Arial;
+	font-size:14px;
+	color:#555;
+	line-height:20px;
+}
+
+.header_font{
+	font-family:"Helvetica", Arial;
+	font-size: 1.2em;
+	color:#555;
+}
+.aside_font{
+	font-family:"Helvetica", Arial;
+	font-weight:lighter;
+	font-size:18px;
+	color:#003;
+	font-style:oblique;
+}
+
+.aside_font1{
+	font-family:"Helvetica", Arial;
+	font-size:18px;
+	color:#003;
+	border-bottom: 2px dotted #ccc;
+}
+
+.aside_font11{
+	font-family:"Helvetica", Arial;
+	font-size:1em;
+	color:#555;
+	text-align:center;
+	border-bottom: 2px dotted #ccc;
+	border-top: 2px dotted #ccc;
+	padding:5px 0 5px;
+}
+
+#main-nav {
+	float: right;
+}
+
+#main-nav ul {
+	position: absolute;
+	top: 40px; right: 190px;
+	z-index: 50000;
+}
+
+#main-nav ul li {
+	display: inline;
+	float: left;
+	position: relative;
+	margin: 0 14px 0 0;
+}
+
+#main-nav ul li.over, #main-nav ul li:hover {
+	cursor: pointer;
+}
+
+#main-nav ul li.last {
+	margin-right: 0;
+}
+
+#main-nav ul li a, #main-nav ul li a:hover {
+	color: #FFF;
+	font-size: 1.083em;
+	text-decoration: none;
+	display: inline-block;
+	width: auto;
+	zoom: 1;
+	padding: 2px 22px 11px 0;
+	height: 15px;
+	line-height: 15px;
+	border-bottom: 6px solid transparent;
+}
+
+#main-nav ul li a:hover {
+	border-bottom-color: #fff;
+}
+
+#main-nav ul li a em {
+	display: inline-block;
+	width: 9px; height: 5px;
+	background: transparent url('../images/template/site-sprites.png') no-repeat 0 -70px;
+	margin: 0 0 0 14px;
+	vertical-align: middle;
+}
+
+#main-nav ul li.last a em {
+	display: none;
+}
+
+#main-nav ul ul {
+	line-height: 1em;
+	width: 130px;
+	padding: 30px 30px 60px 240px;
+	background:#FFF ;
+	position: absolute;
+	top: 34px;
+	left: 0;
+	display: none;
+	z-index: 20;
+}
+
+#main-nav ul li:hover ul, #main-nav ul li.over ul {
+	display: block;
+}
+
+#main-nav ul ul li, #main-nav ul ul li.over, #main-nav ul ul li.lastItem, #main-nav ul ul li:hover {
+	border-bottom: 2px dotted #B3B3B3;
+	padding: 6px 0;
+	float: none;
+	display: block;
+	position: static;
+	line-height: 1em;
+	cursor: auto;
+}
+
+#main-nav li ul#left-margin {
+	left: -229px;
+}
+
+#main-nav ul ul li a, #main-nav ul ul li a:hover {
+	text-decoration: none;
+	color: #333;
+	padding: 0;
+	border: none;
+	line-height: 1em;
+	height: auto;
+}
+
+#main-nav li ul li a:hover {
+	color: #3399FF;
+}
+
+.nav-rollover h2 {
+	font-size: 2.5em;
+	position: absolute;
+	left: 30px;
+	top: 30px;
+	width: 190px;
+	float: right;
+	margin-bottom: 2px;
+	color: #033E68;
+}
+
+.nav-rollover h2 em {
+	display: block;
+	width: 21px; height: 41px;
+	background: transparent url('..images/transparent_next.png') no-repeat 0 -100px;
+	float: right; 
+}
+
+#main-nav .nav-rollover li a em {
+	display: none;
+}
+
+.nav-rollover em.splat {
+	position: absolute;
+	bottom: 6px;
+	right: 16px;
+}
+
+
+.secondary_nav_menu{
+	clear: left;
+    float: left;
+    margin-top: 40px;
+}
+
+.secondary_nav_menu ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.secondary_nav_menu ul li{
+	padding: 2px;
+}
+
+.secondary_nav_menu ul li a{
+	font-size: 1.2em;
+	text-transform: lowercase;
+	color: #555;
+	font-weight: 100;
+}
+
+#contact_wrapper{
+	float: right;
+	width: 35%;
+}
+
+#contact_wrapper h1{
+	border-bottom: 2px dotted #ccc;
+	margin-bottom: 2px;
+}
+
+.contact_span{
+	font-weight: bold;
+    border-bottom: 3px solid;
+    text-align: right;
+    color: #fff;
+}
+
+#contact_details{
+	float: right;
+	width: 220px;
+	text-align: right;
+}
+
+#contact_details em{
+	float: left;
+	font-style: normal;
+}
+
+#foot_notes{
+	clear: both;
+	margin-top: 20px;
+	border-top: 1px dotted #aaa;
+	padding-top: 10px;
+}
+
+#foot_notes ul li a{/*for specificity*/
+	color: #aaa;
+	font-size: 10px;
+
+}
+
+#foot_notes a{
+	float: right;
+	color: #aaa;
+	font-size: 10px;
+}
+
+/*****************************
+Our-partners
+****************************/
+#partners{
+	display:inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+   border-top: 2px dotted #ccc;
+   border-bottom: 2px dotted #ccc;
+ 
+}
+
+#partners li {
+	list-style:none;
+  float: left;
+  margin: 3%;
+  color: #bdc3c7;
+}
+  
+  
+  #partners li p {
+  margin: 0;
+  padding: 5%;
+  font-size: 0.75em;
+  color:#003;
+  border-bottom: 2px dotted #ccc;
+  
+}
+
+.image_wrapper{
+		position: relative;
+		width: 100%;
+	}
+
+	#pixfooter{
+	    position: absolute;
+	    bottom: 0px;
+	    width: 100%;
+	    background: rgba(3, 62, 104, 0.8);
+	    height: 30px;
+	    display:none;/*since we no longer need it*/
+	}
+
+	#partners li div{
+		width: 120px;
+	    height: 120px;
+	    overflow: hidden;
+	}
+	#partners li div img{
+		border-bottom: 2px dotted #ccc;
+	    height: 100%; /* you can use either one of the height or width but not both */
+	}
+
+
+
+
+
+
+
+
+
